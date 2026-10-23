@@ -7,4 +7,4 @@ export const metadata: Metadata = {
  openGraph: {title:'Haythem Ben Haddada — Digital experiences with dimension', description:'Frontend development · 3D modeling · Cinematic websites',images:['/haythem.jpg']},
  icons: {icon:'/favicon.svg'}
 };
-export default function RootLayout({children}:{children:React.ReactNode}) {return <html lang="en"><body>{children}</body></html>}
+export default function RootLayout({children}:{children:React.ReactNode}) {return <html lang="en"><head><script dangerouslySetInnerHTML={{__html:`(function(){try{var n=performance.getEntriesByType('navigation')[0];if(n&&n.type==='reload'){history.scrollRestoration='manual';if(location.hash)history.replaceState(history.state,'',location.pathname+location.search);var top=function(){window.scrollTo({top:0,left:0,behavior:'instant'});};top();window.addEventListener('pageshow',top,{once:true});}}catch(e){}})();`}}/></head><body>{children}</body></html>}
