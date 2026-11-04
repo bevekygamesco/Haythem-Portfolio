@@ -93,3 +93,74 @@ body{padding:0;background:#eef3f8}main{border-radius:0}.hero-pin .reference-hero
 
 /* Keep direct portrait touch tracking; hide the mobile gaze control. */
 .mobile-gaze-dock{display:none!important}
+
+/* Compact project gallery: smaller imagery with the existing readable copy. */
+.real-project-grid{max-width:1180px;margin-inline:auto;gap:22px}
+.real-project{border-radius:18px}
+.real-project-info{padding:22px 24px}
+.project-spotlight{grid-template-columns:1.15fr 1fr;min-height:0}
+.project-spotlight .real-project-info{padding:26px}
+.project-spotlight .real-project-visual{min-height:0;align-self:center;height:auto}
+.project-spotlight .real-project-visual img{aspect-ratio:1.5;height:auto}
+.project-spotlight .project-name-row h3{font-size:32px}
+@media(min-width:701px){.project-spotlight .real-project-visual img{max-height:390px}}
+@media(max-width:1000px) and (min-width:701px){.project-spotlight{grid-template-columns:1fr 1fr}.project-spotlight .real-project-info{padding:22px}.project-spotlight .project-name-row h3{font-size:28px}}
+@media(max-width:700px){.real-project-grid{max-width:480px;gap:20px}.project-spotlight{display:block}.real-project-info,.project-spotlight .real-project-info{padding:20px}.real-project-visual img,.project-spotlight .real-project-visual img{aspect-ratio:1.65}.project-spotlight .project-name-row h3{font-size:28px}}
+
+/* Six projects in a compact, equal three-column desktop gallery. */
+.real-project-grid{max-width:1280px;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;align-items:stretch}
+.real-project{min-width:0;display:flex;flex-direction:column}
+.real-project-visual img{aspect-ratio:1.65;object-fit:cover}
+.real-project-info{padding:22px;display:flex;flex-direction:column;flex:1;min-width:0}
+.real-project-info .project-name-row h3{font-size:27px;line-height:1.15}
+.real-project-info h4{font-size:15px;line-height:1.5}
+.real-project-info>p{font-size:14px;line-height:1.75}
+.real-project-info .project-tech{flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.real-project-info .project-url{margin-top:auto;padding-top:16px;overflow-wrap:anywhere;gap:12px;font-size:12px}
+.tone-rktec-solution .real-project-visual{background:#0b213c}
+@media(max-width:1100px){.real-project-grid{grid-template-columns:repeat(2,minmax(0,1fr));max-width:940px}}
+@media(max-width:700px){.real-project-grid{grid-template-columns:1fr;max-width:480px;gap:20px}.real-project-info{padding:20px}}
+
+/* Compact summaries; full project stories live in the dialog. */
+.real-project-grid{align-items:stretch}
+.real-project{cursor:pointer}
+.real-project:focus-visible{outline:2px solid #126bff;outline-offset:5px}
+.project-thumbnail-button{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;position:relative;text-align:left;overflow:hidden}
+.project-thumbnail-button img{display:block;width:100%;transition:transform .5s}
+.project-thumbnail-button:hover img{transform:scale(1.025)}
+.project-thumbnail-button:hover .capture-hover,.project-thumbnail-button:focus-visible .capture-hover{opacity:1}
+.project-compact .real-project-visual img{aspect-ratio:1.9}
+.project-compact .real-project-info{padding:20px;gap:0}
+.project-compact .project-discipline{font-size:10px;line-height:1.5;letter-spacing:.04em;min-height:15px}
+.project-compact .project-name-row{margin:12px 0 19px}
+.project-compact .project-name-row h3{font-size:25px}
+.project-card-actions{display:flex;align-items:center;gap:12px;justify-content:space-between;border-top:1px solid #dce6ef;padding-top:14px;margin-top:auto}
+.project-card-actions button,.project-card-actions a{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;padding:6px 0;color:#315e83;background:transparent}
+.project-card-actions a{color:#126bff}
+.project-card-actions button:hover,.project-card-actions a:hover{color:#063e9c}
+.project-spotlight{display:grid;grid-column:1/-1;grid-template-columns:1.4fr 1fr;align-items:center;min-height:0;background:#0c223b}
+.project-spotlight .real-project-visual{height:100%;align-self:stretch;display:flex;align-items:center;background:#0d263e}
+.project-spotlight .project-thumbnail-button{width:100%}
+.project-spotlight .real-project-visual img{aspect-ratio:1.65;height:auto;max-height:none}
+.project-spotlight .real-project-info{padding:30px;display:flex;justify-content:center;height:100%}
+.project-spotlight .project-name-row h3{font-size:34px;color:white}
+.project-spotlight .project-card-actions{border-color:#29465f;margin-top:4px}
+.project-spotlight .project-card-actions button,.project-spotlight .project-card-actions a{color:#b8d9ff}
+@media(max-width:1000px) and (min-width:701px){.project-spotlight{grid-template-columns:1.1fr 1fr}.project-spotlight .real-project-info{padding:24px}.project-spotlight .real-project-info>p{font-size:13px}.project-spotlight .project-name-row h3{font-size:30px}}
+@media(max-width:700px){.project-spotlight{display:flex;flex-direction:column}.project-spotlight .real-project-visual{width:100%;height:auto}.project-spotlight .real-project-info{padding:22px;width:100%}.project-spotlight .project-name-row h3{font-size:29px}.project-compact .real-project-info{padding:18px 20px}.project-compact .real-project-visual img{aspect-ratio:1.9}}
+@media(prefers-reduced-motion:reduce){.project-thumbnail-button:hover img{transform:none}}
+
+/* Full rectangular thumbnails and readable, softly shortened summaries. */
+.real-project .project-thumbnail-button{position:relative;inset:auto;display:block;width:100%;height:auto;min-height:0;padding:0;border:0;border-radius:0;box-shadow:none;background:transparent;transform:none;overflow:hidden;text-align:left;line-height:0}
+.real-project .project-thumbnail-button img{display:block;width:100%;height:auto;aspect-ratio:1.6;object-fit:cover}
+.project-compact .project-name-row{margin:12px 0 10px}
+.project-compact .real-project-info{padding:22px}
+.project-compact .real-project-info h4{font-size:14px;line-height:1.5;margin:0 0 8px}
+.real-project-info .project-description-preview{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;font-size:14px;line-height:1.75;margin:0 0 15px}
+.project-compact .project-tech{margin:0 0 18px}
+.project-compact .project-tech span{font-size:10px;padding:6px 9px}
+.project-spotlight .project-description-preview{-webkit-line-clamp:2;margin-bottom:18px}
+.project-spotlight .project-tech{margin-bottom:20px}
+@media(max-width:700px){.project-compact .real-project-info{padding:20px}.real-project .project-thumbnail-button img{aspect-ratio:1.6}}
+
+.project-thumbnail-button .capture-hover{line-height:1.4}
